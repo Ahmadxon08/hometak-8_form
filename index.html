@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="table_sec">
+      <div class="container">
+        <div class="table_content">
+          <div class="table_row">
+            <div class="input_div">
+              <input type="text" name="input" id="input" placeholder="F.I.SH" />
+            </div>
+            <select class="promotion" name="select" id="select">
+              <option value="promotion">Lavozim turini tanlang</option>
+              <option value="promotion">junior</option>
+              <option value="promotion">middle</option>
+              <option value="promotion">senior</option>
+            </select>
+            <select class="region" name="select" id="select">
+              <option value="promotion">Farg'ona</option>
+              <option value="promotion">Toshkent</option>
+              <option value="promotion">Samarqand</option>
+              <option value="promotion">Buxoro</option>
+            </select>
+            <div class="add">
+              <a href="">Qo'shish</a>
+            </div>
+          </div>
+          <table class="table my-3">
+            <thead>
+              <th>No</th>
+              <th>Ism</th>
+              <th>Familiya</th>
+              <th>Manzil</th>
+              <th>Tug'ilgan kuni</th>
+              <th>Lavozim</th>
+              <th>Lavozim turi</th>
+              <th>Maoshi</th>
+              <th>Uylanganmi</th>
+              <th>Faoliyat</th>
+            </thead>
+            <tbody id="students_list"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <div class="modal">
+      <div class="modal_content">
+        <div class="head">
+          <h1>O'quvchining ma'lumotlari</h1>
+          <a id="remove" href="">
+            <img src="./img/close.png" alt="close"
+          /></a>
+        </div>
+        <div class="line"><p></p></div>
+
+        <div class="label_input">
+          <label for="firstName">Isimni kiriting:</label>
+          <div class="input_text">
+            <input type="text" name="name" id="firstName" required />
+          </div>
+          <label for="lastName">Familiyangizni kiriting:</label>
+          <div class="input_text">
+            <input type="text" name="name" id="lastName" required />
+          </div>
+          <label for="location">Manzilni tanlang:</label>
+          <select class="input_select" name="select" id="location">
+            <option value="promotion">Farg'ona</option>
+            <option value="promotion">Toshkent</option>
+            <option value="promotion">Samarqand</option>
+            <option value="promotion">Buxoro</option>
+          </select>
+        </div>
+        <div class="inputs">
+          <div class="input_1">
+            <label for="date">Tug'ilgan kuni</label>
+            <input type="date" required />
+            <label for="typeOfPromotion">Lavozim turi</label>
+            <select name="typeOfPromotion" id="typeOfPromotion">
+              <option value="senior">senior</option>
+              <option value="middle">middle</option>
+              <option value="junior">junior</option>
+            </select>
+          </div>
+          <div class="input_2">
+            <label for="promotion">Lavozim</label>
+            <select name="promotion" id="promotion">
+              <option value="React">React</option>
+              <option value="NodeJs">NodeJs</option>
+              <option value="Go">Go</option>
+              <option value="Pyhton">Pyhton</option>
+            </select>
+            <label for="salary">Maoshi</label>
+            <input type="number" id="salary" name="number" />
+          </div>
+        </div>
+        <div class="check">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="isMarried"
+            name="isMarried"
+          />
+          <label for="isMarried" id="isMarried"><h1>Uylanganmi ?</h1></label>
+        </div>
+        <div class="line"><p></p></div>
+
+        <div class="input_link">
+          <a class="btn1" href=""><button>Yopish</button></a>
+          <a class="btn2" href=""><button>Qo'shish</button></a>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>
