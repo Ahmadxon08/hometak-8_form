@@ -1,7 +1,6 @@
 ///table /////
 
 // const students = JSON.parse(localStorage.getItem("students")) || [];
-
 let students = [
   {
     id: 1,

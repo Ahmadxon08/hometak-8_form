@@ -49,9 +49,7 @@
               <th>Faoliyat</th>
             </thead>
             <tbody id="students_list">
-              <tr>
-                
-              </tr>
+              <tr></tr>
             </tbody>
           </table>
         </div>
@@ -61,9 +59,7 @@
       <div class="modal_content">
         <div class="head">
           <h1>O'quvchining ma'lumotlari</h1>
-          <a id="remove" href="">
-            <img src="./img/close.png" alt="close"
-          /></a>
+          <img src="./img/close.png" alt="close" onclick="openBtn()" />
         </div>
         <div class="line"><p></p></div>
 
@@ -77,7 +73,7 @@
             <input type="text" name="name" id="lastName" required />
           </div>
           <label for="location">Manzilni tanlang:</label>
-          <select class="input_select" name="select" id="location">
+          <select class="input_select" name="select" id="adres">
             <option value="promotion">Farg'ona</option>
             <option value="promotion">Toshkent</option>
             <option value="promotion">Samarqand</option>
@@ -87,7 +83,7 @@
         <div class="inputs">
           <div class="input_1">
             <label for="date">Tug'ilgan kuni</label>
-            <input type="date" required />
+            <input type="date" required   id="date"/>
             <label for="typeOfPromotion">Lavozim turi</label>
             <select name="typeOfPromotion" id="typeOfPromotion">
               <option value="senior">senior</option>
@@ -121,7 +117,7 @@
         <div class="input_link">
           <button class="btn1" onclick="openBtn()">Yopish</button>
           <button class="btn2" onclick="openBtn()">Qo'shish</button>
-        </div>>
+        </div>
       </div>
     </div>
     <script src="./js/main.js"></script>
