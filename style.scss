@@ -1,6 +1,6 @@
 @font-face {
   font-family: Roboto;
-  src: url(./fonts/Roboto-Regular.ttf);
+  src: url("./fonts/Roboto-Regular.ttf");
 }
 
 * {
@@ -93,12 +93,10 @@ body {
         border-bottom-right-radius: 5px;
         border-top-right-radius: 5px;
         cursor: pointer;
-        a {
-          font-size: 14px;
-          font-family: Roboto;
-          font-weight: 400;
-          color: #fff;
-        }
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 400;
+        color: #fff;
       }
       .add:hover {
         background-color: rgba(36, 110, 36, 0.708);
@@ -110,11 +108,11 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
-    animation: modalScale 0.3s linear alternate;
+    background-color: rgba(128, 128, 128, 0.671);
+    transform: scale(0);
     .modal_content {
       display: flex;
       align-items: start;
@@ -123,7 +121,6 @@ body {
       width: 500px;
       height: 566px;
       border-radius: 8px;
-
       padding: 16px;
       border: 1px solid grey;
       background: white;
@@ -289,48 +286,38 @@ body {
         gap: 6px;
         .btn1 {
           display: flex;
-          button {
-            width: 60px;
-            height: 40px;
-            border-radius: 6px;
-            background-color: #312e2e6b;
-            border: 0;
-            color: #fff;
-            transition: all 0.4s;
-          }
-          button:hover {
-            color: gray;
-            background-color: #ccccccaf;
-          }
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 40px;
+          border-radius: 6px;
+          background-color: #312e2e6b;
+          border: 0;
+          color: #fff;
+          transition: all 0.4s;
+        }
+        .btn1:hover {
+          color: gray;
+          background-color: #ccccccaf;
         }
         .btn2 {
-          display: flex;
-          button {
-            width: 70px;
-            height: 40px;
-            border-radius: 6px;
-            background-color: #0e5c2e;
-            border: 0;
-            color: #fff;
-            transition: all 0.4s;
-          }
-          button:hover {
-            color: #064721;
-            background-color: #44cd6daf;
-          }
+          width: 70px;
+          height: 40px;
+          border-radius: 6px;
+          background-color: #0e5c2e;
+          border: 0;
+          color: #fff;
+          transition: all 0.4s;
+        }
+        .btn2:hover {
+          color: #064721;
+          background-color: #44cd6daf;
         }
       }
     }
   }
   .modal.open {
-    display: flex;
-  }
-  @keyframes modalScale {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
+    transform: scale(1);
+    transition: 0.3s;
   }
 }

@@ -1,6 +1,6 @@
 @font-face {
   font-family: Roboto;
-  src: url(./fonts/Roboto-Regular.ttf);
+  src: url("./fonts/Roboto-Regular.ttf");
 }
 * {
   margin: 0;
@@ -93,8 +93,6 @@ body .table_sec .table_row .add {
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   cursor: pointer;
-}
-body .table_sec .table_row .add a {
   font-size: 14px;
   font-family: Roboto;
   font-weight: 400;
@@ -108,11 +106,11 @@ body .modal {
   top: 0;
   right: 0;
   left: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
-  animation: modalScale 0.3s linear alternate;
+  background-color: rgba(128, 128, 128, 0.671);
+  transform: scale(0);
 }
 body .modal .modal_content {
   display: flex;
@@ -287,8 +285,8 @@ body .modal .modal_content .input_link {
 }
 body .modal .modal_content .input_link .btn1 {
   display: flex;
-}
-body .modal .modal_content .input_link .btn1 button {
+  align-items: center;
+  justify-content: center;
   width: 60px;
   height: 40px;
   border-radius: 6px;
@@ -297,14 +295,11 @@ body .modal .modal_content .input_link .btn1 button {
   color: #fff;
   transition: all 0.4s;
 }
-body .modal .modal_content .input_link .btn1 button:hover {
+body .modal .modal_content .input_link .btn1:hover {
   color: gray;
   background-color: rgba(204, 204, 204, 0.6862745098);
 }
 body .modal .modal_content .input_link .btn2 {
-  display: flex;
-}
-body .modal .modal_content .input_link .btn2 button {
   width: 70px;
   height: 40px;
   border-radius: 6px;
@@ -313,18 +308,11 @@ body .modal .modal_content .input_link .btn2 button {
   color: #fff;
   transition: all 0.4s;
 }
-body .modal .modal_content .input_link .btn2 button:hover {
+body .modal .modal_content .input_link .btn2:hover {
   color: #064721;
   background-color: rgba(68, 205, 109, 0.6862745098);
 }
 body .modal.open {
-  display: flex;
-}
-@keyframes modalScale {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
+  transform: scale(1);
+  transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */
