@@ -1,14 +1,32 @@
 ///table /////
 
-const students = JSON.parse(localStorage.getItem("students")) || [];
+// const students = JSON.parse(localStorage.getItem("students")) || [];
 
+let students = [
+  {
+    id: 1,
+    firstName: "Doe",
+    lastName: "back",
+    location: "qoqon",
+    date: "12-11-2001",
+  },
+  {
+    id: 2,
+    firstName: "Doe",
+    lastName: "back",
+    location: "qoqon",
+    date: "12-11-2001",
+  },
+];
+
+console.log(students);
 const btnAdd = document.querySelector(".btn2");
 
 const studentList = document.getElementById("students_list");
 
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lasttName");
-const location = document.getElementById("location");
+const adres = document.getElementById("adres");
 const date = document.getElementById("date");
 const typeOfPromotion = document.getElementById("typeOfPromotion");
 const promotion = document.getElementById("promotion");
@@ -18,6 +36,7 @@ const isMarried = document.getElementById("isMarried");
 function displayStudents(students) {
   let str = "";
   students.forEach((student) => {
+    console.log(student);
     str += `
     <tr>
     <td>${student.id}</td>
@@ -41,7 +60,6 @@ function displayStudents(students) {
 }
 displayStudents(students);
 
-
 btnAdd.addEventListener("click", function (e) {
   e.preventDefault();
   const newStudent = {
@@ -56,6 +74,5 @@ btnAdd.addEventListener("click", function (e) {
   };
   let newStudents = [...students, newStudent];
   displayStudents(newStudents);
-
   localStorage.setItem("students", JSON.stringify(newStudents));
 });

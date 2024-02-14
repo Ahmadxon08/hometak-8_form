@@ -33,9 +33,7 @@
               <option value="promotion">Samarqand</option>
               <option value="promotion">Buxoro</option>
             </select>
-            <div class="add">
-              <a href="">Qo'shish</a>
-            </div>
+            <div class="add" onclick="openBtn()">Qo'shish</div>
           </div>
           <table class="table my-3">
             <thead>
@@ -50,7 +48,11 @@
               <th>Uylanganmi</th>
               <th>Faoliyat</th>
             </thead>
-            <tbody id="students_list"></tbody>
+            <tbody id="students_list">
+              <tr>
+                
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -117,9 +119,9 @@
         <div class="line"><p></p></div>
 
         <div class="input_link">
-          <a class="btn1" href=""><button>Yopish</button></a>
-          <a class="btn2" href=""><button>Qo'shish</button></a>
-        </div>
+          <button class="btn1" onclick="openBtn()">Yopish</button>
+          <button class="btn2" onclick="openBtn()">Qo'shish</button>
+        </div>>
       </div>
     </div>
     <script src="./js/main.js"></script>
